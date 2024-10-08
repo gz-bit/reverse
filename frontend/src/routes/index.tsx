@@ -1,25 +1,32 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+// import { Link } from "@builder.io/qwik-city";
+import { Hero } from "~/components/site/hero/hero";
+// import { ButtonAction } from "~/components/ui/button-action";
 
 export default component$(() => {
   return (
     <>
-      <h1>Hi 👋</h1>
-      <div>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
+      <Hero />
+      <div class="flex justify-center py-12 w-full">
+        {/* <Link href="/members/dashboard">
+
+          <ButtonAction label="Dashboard" />
+        </Link> */}
+
+        <a href="/members/dashboard">DASHBOARD</a>
       </div>
     </>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "Code Raiders",
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content:
+        "Code, training and applications for making development exciting",
     },
   ],
 };
